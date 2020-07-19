@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to SAPUI5 Runtime!</title>
+    <style>
+        body {
+            width: 35em;
+            margin: 0 auto;
+            font-family: Tahoma, Verdana, Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to SAPUI5 Runtime!</h1>
+    <p>If you see this page, the SAPUI5 Runtime is deployed and the nginx web server is successfully installed and
+        working.</p>
+
+    <p>To use the runtime in your project, you could access the SAPUI5 core here:<br />
+        <a id="url"></a>
+    </p>
+
+    <p><em>Thank you for using SAPUI5 runtime image.</em></p>
+
+    <script>
+        var url = window.location.href;
+        if (url.indexOf("index.html")) {
+            url = url.replace("/index.html", "");
+        } else if (url.endsWith("/")) {
+            url = url.substr(0, url.length - 1);
+        }
+
+        document.getElementById("url").href = document.getElementById("url").innerHTML = url + "/resources/sap-ui-core.js";
+    </script>
+</body>
+
+</html>
