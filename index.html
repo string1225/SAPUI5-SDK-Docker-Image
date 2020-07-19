@@ -26,12 +26,10 @@
     <script>
         var url = window.location.href;
         if (url.indexOf("index.html")) {
-            url = url.replace("/index.html", "");
-        } else if (url.endsWith("/")) {
-            url = url.substr(0, url.length - 1);
+            url = url.replace("index.html", "");
         }
 
-        document.getElementById("url").href = document.getElementById("url").innerHTML = url + "/resources/sap-ui-core.js";
+        document.getElementById("url").href = document.getElementById("url").innerHTML = url + "resources/sap-ui-core.js";
     </script>
 </body>
 
